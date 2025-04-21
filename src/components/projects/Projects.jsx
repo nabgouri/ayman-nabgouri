@@ -88,6 +88,28 @@ const projects = [
     ),
   },
   {
+    title : 'Character Counter Web App',
+    imgSrc: "project-imgs/character-image.jpg",
+    code: 'https://github.com/nabgouri/character-counter',
+    projectLink: 'https://character-counter-pink.vercel.app/',
+    tech: ['HTML', 'CSS', 'Javascript', 'React JS', 'tailwind CSS'],
+    description: 'Character Counter Web App: Your Text, Your Count',
+    modalContent: (
+      <>
+        <p>
+          A Character Counter Web App that allows users to input text and
+          instantly see the character count. Built with React.js and Tailwind
+          CSS, this project helped me enhance my state management skills and
+          create a responsive design.
+        </p>
+        <p>
+          The app provides a clean, intuitive interface for tracking character
+          usage in real-time.
+        </p>
+      </>
+    ),
+  },
+  {
     title: "Dictionary Web App",
     imgSrc: "project-imgs/dictionaryImage.png",
     code: "https://github.com/nabgouri/dictionary-web-app",
