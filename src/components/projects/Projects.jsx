@@ -54,6 +54,40 @@ const projects = [
     ),
   },
   {
+    title: 'Real-Estate Web App (Missaha)',
+     imgSrc: "project-imgs/real-state.png",
+    code: "https://github.com/nabgouri/Real-State-website",
+    projectLink: "https://real-state-website-eight.vercel.app/",
+    tech: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "TalwindCSS",
+      "Framer Motion",
+    ],
+    description:
+      "Missaha: Your Gateway to Real Estate Excellence",
+    modalContent: (
+      <>
+        <p>
+          I built this using React.js, implementing React Client side rendering to make the page load
+          faster and improve the user experience
+        </p>
+        <p>
+          Tailwind CSS was my go-to for styling, which allowed me to work on my
+          layout skills with Flexbox and Grid
+        </p>
+        <p>
+          {" "}
+          I also added some smooth animations using Framer Motion to bring the
+          site to life. The site is fully responsive, ensuring a seamless
+          experience across all devices
+        </p>
+      </>
+    ),
+  },
+  {
     title: "Dictionary Web App",
     imgSrc: "project-imgs/dictionaryImage.png",
     code: "https://github.com/nabgouri/dictionary-web-app",
