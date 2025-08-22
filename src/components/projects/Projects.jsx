@@ -54,25 +54,17 @@ const projects = [
     ),
   },
   {
-    title: 'Real-Estate Web App (Missaha)',
-     imgSrc: "project-imgs/real-state.png",
+    title: "Real-Estate Web App (Missaha)",
+    imgSrc: "project-imgs/real-state.png",
     code: "https://github.com/nabgouri/Real-State-website",
     projectLink: "https://real-state-website-eight.vercel.app/",
-    tech: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "React",
-      "TalwindCSS",
-      "Framer Motion",
-    ],
-    description:
-      "Missaha: Your Gateway to Real Estate Excellence",
+    tech: ["HTML", "CSS", "JavaScript", "React", "TalwindCSS", "Framer Motion"],
+    description: "Missaha: Your Gateway to Real Estate Excellence",
     modalContent: (
       <>
         <p>
-          I built this using React.js, implementing React Client side rendering to make the page load
-          faster and improve the user experience
+          I built this using React.js, implementing React Client side rendering
+          to make the page load faster and improve the user experience
         </p>
         <p>
           Tailwind CSS was my go-to for styling, which allowed me to work on my
@@ -88,12 +80,44 @@ const projects = [
     ),
   },
   {
-    title : 'Character Counter Web App',
+    title: "Coffeeroasters subscription site",
+    imgSrc: "project-imgs/coffeeroasters.png", // Updated to match the actual project
+    code: "https://github.com/nabgouri/coffeeroasters-subscription-site",
+    projectLink: "https://coffeeroasters-subscription-site-five.vercel.app/",
+    tech: ["Next Js", "React JS", "Tailwind CSS"],
+    description:
+      "A premium coffee subscription service offering expertly curated artisan coffees delivered directly to your door",
+    modalContent: (
+      <>
+        <p>
+          Built a sophisticated coffee subscription platform using React.js and
+          Next.js, featuring an intuitive three-step process: pick your coffee,
+          choose frequency, and receive premium artisan coffees from the world's
+          best roasters.
+        </p>
+        <p>
+          Implemented a clean, modern design with Tailwind CSS focusing on user
+          experience and conversion optimization. The site showcases coffee
+          collections including Gran Espresso, Planalto, Piccollo, and Danche
+          varieties.
+        </p>
+        <p>
+          Created an engaging landing page highlighting key value propositions
+          like "Best quality," "Exclusive benefits," and "Free shipping" with a
+          streamlined subscription flow. The site is fully responsive and
+          optimized for coffee enthusiasts seeking premium, convenient coffee
+          delivery services.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Character Counter Web App",
     imgSrc: "project-imgs/character-image.jpg",
-    code: 'https://github.com/nabgouri/character-counter',
-    projectLink: 'https://character-counter-pink.vercel.app/',
-    tech: ['HTML', 'CSS', 'Javascript', 'React JS', 'tailwind CSS'],
-    description: 'Character Counter Web App: Your Text, Your Count',
+    code: "https://github.com/nabgouri/character-counter",
+    projectLink: "https://character-counter-pink.vercel.app/",
+    tech: ["HTML", "CSS", "Javascript", "React JS", "tailwind CSS"],
+    description: "Character Counter Web App: Your Text, Your Count",
     modalContent: (
       <>
         <p>
