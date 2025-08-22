@@ -81,7 +81,7 @@ const projects = [
   },
   {
     title: "Coffeeroasters subscription site",
-    imgSrc: "project-imgs/coffeeroasters.png", // Updated to match the actual project
+    imgSrc: "project-imgs/Coffeeroasters-subscription-site-image challenge.png",
     code: "https://github.com/nabgouri/coffeeroasters-subscription-site",
     projectLink: "https://coffeeroasters-subscription-site-five.vercel.app/",
     tech: ["Next Js", "React JS", "Tailwind CSS"],
