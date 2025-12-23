@@ -19,7 +19,7 @@ export const Projects = () => {
 const projects = [
   {
     title: "Exxpress Courier PWA",
-    imgSrc: "project-imgs/exxpress-pwa.jpeg",
+    imgSrc: "project-imgs/Exxpress-pwa.png",
     videoLink: "https://www.loom.com/share/f25f390580934cfd992ddd170cf1fbe8", // Replace with your actual Loom video URL
     tech: [
       "React JS",
