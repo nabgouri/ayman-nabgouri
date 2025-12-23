@@ -18,6 +18,85 @@ export const Projects = () => {
 
 const projects = [
   {
+    title: "Exxpress Courier PWA",
+    imgSrc: "project-imgs/exxpress-pwa.jpeg",
+    videoLink: "https://www.loom.com/share/f25f390580934cfd992ddd170cf1fbe8", // Replace with your actual Loom video URL
+    tech: [
+      "React JS",
+      "react router",
+      "Vite",
+      "Tailwind CSS",
+      "PWA",
+      "WebSocket",
+      "Service Workers",
+      "MapLibre GL",
+    ],
+    description:
+      "A comprehensive Progressive Web App for courier management with real-time order notifications, location tracking, and offline capabilities for seamless delivery operations",
+    modalContent: (
+      <>
+        <p>
+          Built a sophisticated courier management Progressive Web App using
+          React.js and Vite, featuring real-time order notifications via
+          WebSocket connections, enabling couriers to receive instant alerts for
+          new delivery assignments and never miss an order opportunity.
+        </p>
+        <p>
+          Implemented a complete order delivery workflow including pickup
+          verification with location confirmation, digital signature capture,
+          payment processing (cash-on-delivery and prepaid), PIN code
+          verification for deliveries, and comprehensive order status tracking.
+          The app features intelligent offline support using IndexedDB and
+          service workers, allowing couriers to continue working even with poor
+          or no internet connectivity.
+        </p>
+        <p>
+          Created advanced features including real-time location tracking with
+          WebSocket integration, push notifications that work even when the app
+          is closed, heartbeat system for maintaining online status, and
+          interactive maps using MapLibre GL for route visualization. The app
+          supports multi-language (Arabic, English, French) with i18next,
+          includes QR code scanning for package verification, and provides
+          comprehensive tour management for batch deliveries. Fully responsive
+          design optimized for mobile-first courier operations with modern UI
+          components and smooth animations.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Coffeeroasters subscription site",
+    imgSrc: "project-imgs/Coffeeroasters-subscription-site-image challenge.png",
+    code: "https://github.com/nabgouri/coffeeroasters-subscription-site",
+    projectLink: "https://coffeeroasters-subscription-site-five.vercel.app/",
+    tech: ["Next Js", "React JS", "Tailwind CSS"],
+    description:
+      "A premium coffee subscription service offering expertly curated artisan coffees delivered directly to your door",
+    modalContent: (
+      <>
+        <p>
+          Built a sophisticated coffee subscription platform using React.js and
+          Next.js, featuring an intuitive three-step process: pick your coffee,
+          choose frequency, and receive premium artisan coffees from the world's
+          best roasters.
+        </p>
+        <p>
+          Implemented a clean, modern design with Tailwind CSS focusing on user
+          experience and conversion optimization. The site showcases coffee
+          collections including Gran Espresso, Planalto, Piccollo, and Danche
+          varieties.
+        </p>
+        <p>
+          Created an engaging landing page highlighting key value propositions
+          like "Best quality," "Exclusive benefits," and "Free shipping" with a
+          streamlined subscription flow. The site is fully responsive and
+          optimized for coffee enthusiasts seeking premium, convenient coffee
+          delivery services.
+        </p>
+      </>
+    ),
+  },
+  {
     title: "Arch Studio Web App",
     imgSrc: "project-imgs/Arch-Studio-Img.png",
     code: "https://github.com/nabgouri/Arch-Studio-website",
@@ -79,38 +158,7 @@ const projects = [
       </>
     ),
   },
-  {
-    title: "Coffeeroasters subscription site",
-    imgSrc: "project-imgs/Coffeeroasters-subscription-site-image challenge.png",
-    code: "https://github.com/nabgouri/coffeeroasters-subscription-site",
-    projectLink: "https://coffeeroasters-subscription-site-five.vercel.app/",
-    tech: ["Next Js", "React JS", "Tailwind CSS"],
-    description:
-      "A premium coffee subscription service offering expertly curated artisan coffees delivered directly to your door",
-    modalContent: (
-      <>
-        <p>
-          Built a sophisticated coffee subscription platform using React.js and
-          Next.js, featuring an intuitive three-step process: pick your coffee,
-          choose frequency, and receive premium artisan coffees from the world's
-          best roasters.
-        </p>
-        <p>
-          Implemented a clean, modern design with Tailwind CSS focusing on user
-          experience and conversion optimization. The site showcases coffee
-          collections including Gran Espresso, Planalto, Piccollo, and Danche
-          varieties.
-        </p>
-        <p>
-          Created an engaging landing page highlighting key value propositions
-          like "Best quality," "Exclusive benefits," and "Free shipping" with a
-          streamlined subscription flow. The site is fully responsive and
-          optimized for coffee enthusiasts seeking premium, convenient coffee
-          delivery services.
-        </p>
-      </>
-    ),
-  },
+
   {
     title: "Character Counter Web App",
     imgSrc: "project-imgs/character-image.jpg",
@@ -159,45 +207,45 @@ const projects = [
       </>
     ),
   },
-  {
-    title: "Calculator Web App",
-    imgSrc: "project-imgs/calculatorImage.png",
-    code: "https://github.com/nabgouri/calculator-app.io",
-    projectLink: "https://nabgouri.github.io/calculator-app.io/",
-    tech: ["HTML", "CSS", "Javascript"],
-    description: "Calculator Web App: Where Logic Meets Design",
-    modalContent: (
-      <>
-        <p>
-          A calculator web app that you can do mathematical equations with, an
-          app that helps me develop my logical and functional programming skills
-          and create beautiful UI for the logic to be UX friendly
-        </p>
-      </>
-    ),
-  },
-  {
-    title: "Tip Calculator Web App",
-    imgSrc: "project-imgs/tip-calImage.png",
-    code: "https://github.com/nabgouri/tip-calculator-app.io",
-    projectLink: "https://nabgouri.github.io/tip-calculator-app.io/",
-    tech: ["HTML", "CSS", "Javascript"],
-    description: "a easy way to calculate your tip",
-    modalContent: (
-      <>
-        <p>
-          Tip Calculator is a convenient web application designed to assist
-          users in quickly and accurately calculating tips for various services.
-          Whether you're at a restaurant, receiving a service, or sharing
-          expenses with friends, TipEase simplifies the tipping process with its
-          user-friendly interface and handy features.
-        </p>
-        <p>
-          Whether you're at a restaurant, receiving a service, or sharing
-          expenses with friends, TipEase simplifies the tipping process with its
-          user-friendly interface and handy features.
-        </p>
-      </>
-    ),
-  },
+  // {
+  //   title: "Calculator Web App",
+  //   imgSrc: "project-imgs/calculatorImage.png",
+  //   code: "https://github.com/nabgouri/calculator-app.io",
+  //   projectLink: "https://nabgouri.github.io/calculator-app.io/",
+  //   tech: ["HTML", "CSS", "Javascript"],
+  //   description: "Calculator Web App: Where Logic Meets Design",
+  //   modalContent: (
+  //     <>
+  //       <p>
+  //         A calculator web app that you can do mathematical equations with, an
+  //         app that helps me develop my logical and functional programming skills
+  //         and create beautiful UI for the logic to be UX friendly
+  //       </p>
+  //     </>
+  //   ),
+  // },
+  // {
+  //   title: "Tip Calculator Web App",
+  //   imgSrc: "project-imgs/tip-calImage.png",
+  //   code: "https://github.com/nabgouri/tip-calculator-app.io",
+  //   projectLink: "https://nabgouri.github.io/tip-calculator-app.io/",
+  //   tech: ["HTML", "CSS", "Javascript"],
+  //   description: "a easy way to calculate your tip",
+  //   modalContent: (
+  //     <>
+  //       <p>
+  //         Tip Calculator is a convenient web application designed to assist
+  //         users in quickly and accurately calculating tips for various services.
+  //         Whether you're at a restaurant, receiving a service, or sharing
+  //         expenses with friends, TipEase simplifies the tipping process with its
+  //         user-friendly interface and handy features.
+  //       </p>
+  //       <p>
+  //         Whether you're at a restaurant, receiving a service, or sharing
+  //         expenses with friends, TipEase simplifies the tipping process with its
+  //         user-friendly interface and handy features.
+  //       </p>
+  //     </>
+  //   ),
+  // },
 ];

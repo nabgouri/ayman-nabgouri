@@ -16,12 +16,16 @@ export const Stats = () => {
             <Chip>HTML</Chip>
             <Chip>CSS</Chip>
             <Chip>React</Chip>
-            <Chip>Tailwind</Chip>
+            <Chip>Next.js</Chip>
+            <Chip>TypeScript</Chip>
+            <Chip>Node.js</Chip>
+            <Chip>Tailwind CSS</Chip>
             <Chip>React Router</Chip>
             <Chip>Redux</Chip>
             <Chip>Framer Motion</Chip>
             <Chip>Git</Chip>
             <Chip>GitHub</Chip>
+            <Chip>GitLab</Chip>
           </div>
         </div>
       </Reveal>

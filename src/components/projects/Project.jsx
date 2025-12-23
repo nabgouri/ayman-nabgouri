@@ -2,12 +2,14 @@ import { useAnimation, useInView, motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { AiFillGithub, AiOutlineExport } from "react-icons/ai";
+import { BsPlayCircle } from "react-icons/bs"; // Add this import for video icon
 import { ProjectModal } from "./ProjectModal";
 import Reveal from "../util/Reveal";
 
 export const Project = ({
   modalContent,
   projectLink,
+  videoLink, // Add this prop
   description,
   imgSrc,
   title,
@@ -67,13 +69,21 @@ export const Project = ({
               </h4>
               <div className="w-full h-[1px] bg-zinc-600" />
 
-              <Link href={code} target="_blank" rel="nofollow">
-                <AiFillGithub className="text-xl text-zinc-300 hover:text-indigo-300 transition-colors" />
-              </Link>
+              {code && (
+                <Link href={code} target="_blank" rel="nofollow">
+                  <AiFillGithub className="text-xl text-zinc-300 hover:text-indigo-300 transition-colors" />
+                </Link>
+              )}
 
-              <Link href={projectLink} target="_blank" rel="nofollow">
-                <AiOutlineExport className="text-xl text-zinc-300 hover:text-indigo-300 transition-colors" />
-              </Link>
+              {videoLink ? (
+                <Link href={videoLink} target="_blank" rel="nofollow">
+                  <BsPlayCircle className="text-xl text-zinc-300 hover:text-indigo-300 transition-colors" />
+                </Link>
+              ) : projectLink ? (
+                <Link href={projectLink} target="_blank" rel="nofollow">
+                  <AiOutlineExport className="text-xl text-zinc-300 hover:text-indigo-300 transition-colors" />
+                </Link>
+              ) : null}
             </div>
           </Reveal>
           <Reveal>
@@ -97,6 +107,7 @@ export const Project = ({
       <ProjectModal
         modalContent={modalContent}
         projectLink={projectLink}
+        videoLink={videoLink}
         setIsOpen={setIsOpen}
         isOpen={isOpen}
         imgSrc={imgSrc}
