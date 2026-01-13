@@ -19,7 +19,7 @@ export const Projects = () => {
 const projects = [
   {
     title: "Mood Tracking App",
-    imgSrc: "project-imgs/mood-tracking-app.png",
+    imgSrc: "project-imgs/mood-tracking.webp",
     code: "https://github.com/nabgouri/mood-tracking",
     projectLink: "https://mood-tracking-two.vercel.app", // Add your deployment URL when available
     tech: [
