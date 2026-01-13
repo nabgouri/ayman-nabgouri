@@ -20,6 +20,9 @@ export const Stats = () => {
             <Chip>TypeScript</Chip>
             <Chip>Node.js</Chip>
             <Chip>Tailwind CSS</Chip>
+            <Chip>shadcn/ui</Chip>
+            <Chip>Prisma</Chip>
+            <Chip>Recharts</Chip>
             <Chip>React Router</Chip>
             <Chip>Redux</Chip>
             <Chip>Framer Motion</Chip>

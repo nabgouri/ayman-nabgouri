@@ -18,6 +18,45 @@ export const Projects = () => {
 
 const projects = [
   {
+    title: "Mood Tracking App",
+    imgSrc: "project-imgs/mood-tracking-app.png",
+    code: "https://github.com/nabgouri/mood-tracking",
+    projectLink: "https://mood-tracking-two.vercel.app", // Add your deployment URL when available
+    tech: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Prisma",
+      "Recharts",
+      "shadcn/ui",
+      "Radix UI",
+    ],
+    description:
+      "A personal wellness app for tracking daily moods, feelings, journal entries, and sleep patterns with visual trend analysis",
+    modalContent: (
+      <>
+        <p>
+          Developed a comprehensive mood tracking application using Next.js 16
+          with the App Router and TypeScript, enabling users to log their daily
+          emotional state through an intuitive multi-step process.
+        </p>
+        <p>
+          Implemented a 4-step mood logging flow featuring mood selection,
+          feelings tags, journal entries, and sleep tracking. Built with
+          shadcn/ui components and Radix UI primitives for accessibility and a
+          polished user experience.
+        </p>
+        <p>
+          Created interactive data visualizations using Recharts to display mood
+          and sleep trends over time, helping users identify patterns in their
+          mental wellness. The app features user authentication, a clean modern
+          design with Tailwind CSS, and persistent data storage with Prisma.
+        </p>
+      </>
+    ),
+  },
+  {
     title: "Exxpress Courier PWA",
     imgSrc: "project-imgs/Exxpress-pwa.png",
     videoLink: "https://www.loom.com/share/f25f390580934cfd992ddd170cf1fbe8", // Replace with your actual Loom video URL

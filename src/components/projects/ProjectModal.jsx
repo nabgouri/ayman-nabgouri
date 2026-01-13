@@ -4,12 +4,10 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { AiFillGithub, AiOutlineExport } from "react-icons/ai";
 import { MdClose } from "react-icons/md";
-import { BsPlayCircle } from "react-icons/bs"; // Add this import
 
 export const ProjectModal = ({
   modalContent,
   projectLink,
-  videoLink, // Add this prop
   setIsOpen,
   imgSrc,
   isOpen,
@@ -62,35 +60,22 @@ export const ProjectModal = ({
               Project Links<span className="text-indigo-500">.</span>
             </p>
             <div className="flex items-center gap-4 text-sm">
-              {code && (
-                <Link
-                  target="_blank"
-                  rel="nofollow"
-                  className="text-zinc-300 hover:text-indigo-300 transition-colors flex items-center gap-1"
-                  href={code}
-                >
-                  <AiFillGithub /> Source Code
-                </Link>
-              )}
-              {videoLink ? (
-                <Link
-                  target="_blank"
-                  rel="nofollow"
-                  className="text-zinc-300 hover:text-indigo-300 transition-colors flex items-center gap-1"
-                  href={videoLink}
-                >
-                  <BsPlayCircle /> Watch Demo
-                </Link>
-              ) : projectLink ? (
-                <Link
-                  target="_blank"
-                  rel="nofollow"
-                  className="text-zinc-300 hover:text-indigo-300 transition-colors flex items-center gap-1"
-                  href={projectLink}
-                >
-                  <AiOutlineExport /> Live Project
-                </Link>
-              ) : null}
+              <Link
+                target="_blank"
+                rel="nofollow"
+                className="text-zinc-300 hover:text-indigo-300 transition-colors flex items-center gap-1"
+                href={code}
+              >
+                <AiFillGithub /> Source Code
+              </Link>
+              <Link
+                target="_blank"
+                rel="nofollow"
+                className="text-zinc-300 hover:text-indigo-300 transition-colors flex items-center gap-1"
+                href={projectLink}
+              >
+                <AiOutlineExport /> Live Project
+              </Link>
             </div>
           </div>
         </div>
