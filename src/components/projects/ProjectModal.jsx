@@ -8,6 +8,7 @@ import { MdClose } from "react-icons/md";
 export const ProjectModal = ({
   modalContent,
   projectLink,
+  videoLink,
   setIsOpen,
   imgSrc,
   isOpen,
@@ -60,22 +61,35 @@ export const ProjectModal = ({
               Project Links<span className="text-indigo-500">.</span>
             </p>
             <div className="flex items-center gap-4 text-sm">
-              <Link
-                target="_blank"
-                rel="nofollow"
-                className="text-zinc-300 hover:text-indigo-300 transition-colors flex items-center gap-1"
-                href={code}
-              >
-                <AiFillGithub /> Source Code
-              </Link>
-              <Link
-                target="_blank"
-                rel="nofollow"
-                className="text-zinc-300 hover:text-indigo-300 transition-colors flex items-center gap-1"
-                href={projectLink}
-              >
-                <AiOutlineExport /> Live Project
-              </Link>
+              {code && (
+                <Link
+                  target="_blank"
+                  rel="nofollow"
+                  className="text-zinc-300 hover:text-indigo-300 transition-colors flex items-center gap-1"
+                  href={code}
+                >
+                  <AiFillGithub /> Source Code
+                </Link>
+              )}
+              {videoLink ? (
+                <Link
+                  target="_blank"
+                  rel="nofollow"
+                  className="text-zinc-300 hover:text-indigo-300 transition-colors flex items-center gap-1"
+                  href={videoLink}
+                >
+                  <AiOutlineExport /> Video Demo
+                </Link>
+              ) : projectLink ? (
+                <Link
+                  target="_blank"
+                  rel="nofollow"
+                  className="text-zinc-300 hover:text-indigo-300 transition-colors flex items-center gap-1"
+                  href={projectLink}
+                >
+                  <AiOutlineExport /> Live Project
+                </Link>
+              ) : null}
             </div>
           </div>
         </div>
