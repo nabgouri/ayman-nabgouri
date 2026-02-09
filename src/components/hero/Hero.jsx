@@ -16,13 +16,13 @@ const Hero = () => {
             <h2 className="pointer-events-auto my-2 text-xl sm:text-2xl text-zinc-300 md:my-4 md:text-4xl">
               I'm a{" "}
               <span className="font-semibold text-indigo-500">
-                Front End Developer
+                Full Stack Developer
               </span>
             </h2>
           </Reveal>
           <Reveal>
             <p className="pointer-events-auto leading-relaxed md:leading-relaxed max-w-xl text-sm text-zinc-300 md:text-base">
-              I'am Creative front-end developer crafting intuitive web
+              I'am Creative full-stack developer crafting intuitive web
               experiences through clean code and innovative design solutions.
               Let's connect!
             </p>

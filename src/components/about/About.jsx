@@ -15,8 +15,8 @@ export const About = () => {
               <span className="bg-indigo-500 text-white py-2 px-3 rounded font-bold mr-1 float-left text-2xl">
                 H
               </span>
-              ey! I&apos;m Ayman, a Dedicated Junior Front-End Developer with
-              expertise in React.js, HTML, CSS, and JavaScript.
+              ey! I&apos;m Ayman, a Dedicated Full-Stack Developer with
+              expertise in React.js, Next.js, Node.js, HTML, CSS, and JavaScript.
             </p>
           </Reveal>
           <Reveal>
