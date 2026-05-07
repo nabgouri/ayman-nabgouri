@@ -4,13 +4,16 @@ import { Project } from "./Project";
 
 export const Projects = () => {
   return (
-    <section className="section-wrapper" id="projects">
-      <SectionHeader title="Projects" dir="r" />
+    <section
+      id="projects"
+      className="section-wrapper scroll-mt-24"
+    >
+      <SectionHeader title="Selected work" dir="r" />
 
-      <div className="grid gap-12 grid-cols-1 md:grid-cols-2">
-        {projects.map((project) => {
-          return <Project key={project.title} {...project} />;
-        })}
+      <div className="grid gap-x-10 gap-y-16 grid-cols-1 md:grid-cols-2">
+        {projects.map((project) => (
+          <Project key={project.title} {...project} />
+        ))}
       </div>
     </section>
   );
@@ -30,7 +33,6 @@ const projects = [
       "Prisma",
       "Recharts",
       "shadcn/ui",
-      "Radix UI",
     ],
     description:
       "A personal wellness app for tracking daily moods, feelings, journal entries, and sleep patterns with visual trend analysis",
@@ -61,13 +63,11 @@ const projects = [
     imgSrc: "project-imgs/Exxpress-pwa.png",
     videoLink: "https://www.loom.com/share/f25f390580934cfd992ddd170cf1fbe8", // Replace with your actual Loom video URL
     tech: [
-      "React JS",
-      "react router",
+      "React",
       "Vite",
       "Tailwind CSS",
       "PWA",
       "WebSocket",
-      "Service Workers",
       "MapLibre GL",
     ],
     description:
@@ -105,10 +105,10 @@ const projects = [
   },
   {
     title: "Coffeeroasters subscription site",
-    imgSrc: "project-imgs/Coffeeroasters-subscription-site-image challenge.png",
+    imgSrc: "project-imgs/Coffeeroasters-subscription-site.png",
     code: "https://github.com/nabgouri/coffeeroasters-subscription-site",
     projectLink: "https://coffeeroasters-subscription-site-five.vercel.app/",
-    tech: ["Next Js", "React JS", "Tailwind CSS"],
+    tech: ["Next.js", "React", "Tailwind CSS"],
     description:
       "A premium coffee subscription service offering expertly curated artisan coffees delivered directly to your door",
     modalContent: (
@@ -146,9 +146,9 @@ const projects = [
       "JavaScript",
       "React",
       "React Router",
-      "TalwindCSS",
+      "Tailwind CSS",
       "Framer Motion",
-      "SupaBase",
+      "Supabase",
     ],
     description:
       "Arch Studio: Architectural Elegance Reimagined Digital Portfolio",
@@ -176,7 +176,7 @@ const projects = [
     imgSrc: "project-imgs/real-state.png",
     code: "https://github.com/nabgouri/Real-State-website",
     projectLink: "https://real-state-website-eight.vercel.app/",
-    tech: ["HTML", "CSS", "JavaScript", "React", "TalwindCSS", "Framer Motion"],
+    tech: ["React", "Tailwind CSS", "Framer Motion"],
     description: "Missaha: Your Gateway to Real Estate Excellence",
     modalContent: (
       <>
@@ -203,7 +203,7 @@ const projects = [
     imgSrc: "project-imgs/character-image.jpg",
     code: "https://github.com/nabgouri/character-counter",
     projectLink: "https://character-counter-pink.vercel.app/",
-    tech: ["HTML", "CSS", "Javascript", "React JS", "tailwind CSS"],
+    tech: ["React", "Tailwind CSS"],
     description: "Character Counter Web App: Your Text, Your Count",
     modalContent: (
       <>
@@ -225,7 +225,7 @@ const projects = [
     imgSrc: "project-imgs/dictionaryImage.png",
     code: "https://github.com/nabgouri/dictionary-web-app",
     projectLink: "https://dictionary-web-app-gamma-two.vercel.app/",
-    tech: ["HTML", "CSS", "Javascript", "React JS"],
+    tech: ["React", "Dictionary API"],
     description:
       "A Dictionary Web App : Word Wiz: Linguistic Discovery at Your Fingertips",
     modalContent: (

@@ -1,4 +1,3 @@
-import { AiOutlineArrowRight } from "react-icons/ai";
 import { SectionHeader } from "../util/SectionHeader";
 import Reveal from "../util/Reveal";
 import { MyLinks } from "../nav/Header";
@@ -6,45 +5,35 @@ import { Stats } from "./Stats";
 
 export const About = () => {
   return (
-    <section id="about" className="section-wrapper">
+    <section id="about" className="section-wrapper scroll-mt-24">
       <SectionHeader title="About" dir="l" />
-      <div className="grid grid-cols-1 md:grid-cols-[1fr_300px] gap-8">
-        <div className="space-y-4">
+      <div className="grid grid-cols-1 md:grid-cols-[1fr_300px] gap-12 md:gap-16">
+        <div className="space-y-5 max-w-prose">
           <Reveal>
-            <p className="leading-relaxed text-zinc-300">
-              <span className="bg-indigo-500 text-white py-2 px-3 rounded font-bold mr-1 float-left text-2xl">
-                H
-              </span>
-              ey! I&apos;m Ayman, a Dedicated Full-Stack Developer with
-              expertise in React.js, Next.js, Node.js, HTML, CSS, and JavaScript.
+            <p className="leading-[1.7] text-fg-muted text-base md:text-lg">
+              I build full-stack web products end to end. Primarily React,
+              Next.js, and TypeScript on the front; Node.js, Prisma, and
+              Postgres on the back. I treat the interface as the product, and
+              design choices as engineering choices.
             </p>
           </Reveal>
           <Reveal>
-            <p className="leading-relaxed text-zinc-300">
-              Skilled in creating responsive web applications using React, React
-              Router, Tailwind CSS, Redux, and Framer Motion..
+            <p className="leading-[1.7] text-fg-muted text-base md:text-lg">
+              I&apos;ve shipped a wellness tracker with multi-step flows and
+              visual analytics, a courier PWA with WebSocket-driven order
+              routing and offline-first delivery, and a handful of smaller
+              products along the way.
             </p>
           </Reveal>
           <Reveal>
-            <p className="leading-relaxed text-zinc-300">
-              Passionate about building intuitive, high-performance user
-              interfaces and eager to contribute to innovative development
-              teams..
+            <p className="leading-[1.7] text-fg-muted text-base md:text-lg">
+              Looking for a team where the design bar is high, the problems
+              are real, and how something feels is treated as a first-class
+              concern.
             </p>
           </Reveal>
           <Reveal>
-            <p className="leading-relaxed text-zinc-300">
-              I&apos;m passively looking for new positions where I can Show my
-              love for code with my love for adding value to the world. If you
-              think you&apos;ve got an apportunity, let&apos;s connect 🔗
-            </p>
-          </Reveal>
-          <Reveal>
-            <div className="flex items-center gap-6">
-              <div className="flex items-center gap-4 text-sm text-indigo-300">
-                <span>My links</span>
-                <AiOutlineArrowRight />
-              </div>
+            <div className="pt-4">
               <MyLinks />
             </div>
           </Reveal>

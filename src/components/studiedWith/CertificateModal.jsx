@@ -2,19 +2,21 @@ import { useEffect, useId, useRef } from "react";
 import ReactDOM from "react-dom";
 import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
-import { AiFillGithub, AiOutlineExport } from "react-icons/ai";
+import { AiOutlineExport } from "react-icons/ai";
+import { HiOutlineDocumentArrowDown } from "react-icons/hi2";
 import { MdClose } from "react-icons/md";
 
-export const ProjectModal = ({
-  modalContent,
-  projectLink,
-  videoLink,
+export const CertificateModal = ({
   setIsOpen,
-  imgSrc,
   isOpen,
   title,
-  code,
-  tech,
+  creator,
+  year,
+  imgSrc,
+  pdfHref,
+  verifyUrl,
+  summary,
+  skills,
 }) => {
   const titleId = useId();
   const dialogRef = useRef(null);
@@ -89,68 +91,80 @@ export const ProjectModal = ({
         <button
           type="button"
           onClick={() => setIsOpen(false)}
-          aria-label="Close project details"
+          aria-label="Close certificate details"
           className="absolute top-4 right-4 z-10 inline-flex items-center justify-center w-9 h-9 rounded-md text-fg-muted hover:text-fg hover:bg-bg-elevated transition-colors"
         >
           <MdClose className="text-xl" aria-hidden="true" />
         </button>
 
-        <img
-          className="w-full"
-          src={imgSrc}
-          alt={`Screenshot of ${title}`}
-          loading="lazy"
-          decoding="async"
-        />
+        <div className="bg-bg-elevated p-4 md:p-6">
+          <img
+            className="w-full rounded-md shadow-md"
+            src={imgSrc}
+            alt={`${title} certificate awarded to Ayman Nabgouri`}
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+
         <div className="p-6 md:p-8">
           <h2
             id={titleId}
-            className="font-display text-2xl md:text-3xl text-fg mb-2"
+            className="font-display text-2xl md:text-3xl text-fg mb-1"
           >
             {title}
           </h2>
-          <p className="text-xs uppercase tracking-[0.12em] text-fg-dim mb-6">
-            {tech.join(" / ")}
-          </p>
+          <p className="text-accent-muted mb-6">by {creator}</p>
 
-          <div className="space-y-4 leading-relaxed text-sm md:text-base text-fg-muted">
-            {modalContent}
-          </div>
+          {summary && (
+            <p className="leading-relaxed text-sm md:text-base text-fg-muted max-w-prose">
+              {summary}
+            </p>
+          )}
+
+          {skills && skills.length > 0 && (
+            <div className="mt-6">
+              <p className="text-xs uppercase tracking-[0.12em] text-fg-dim mb-3">
+                What it covered
+              </p>
+              <ul className="flex flex-wrap gap-2">
+                {skills.map((skill) => (
+                  <li
+                    key={skill}
+                    className="text-xs px-2 py-1 rounded-sm bg-bg-elevated text-fg-muted"
+                  >
+                    {skill}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           <div className="mt-8 pt-6 border-t border-line">
             <p className="font-display text-base mb-3 text-fg">
-              Project links<span className="text-accent">.</span>
+              Verify<span className="text-accent">.</span>
             </p>
             <div className="flex flex-wrap items-center gap-5 text-sm">
-              {code && (
+              {verifyUrl && (
                 <Link
+                  href={verifyUrl}
                   target="_blank"
                   rel="nofollow noreferrer"
                   className="text-fg-muted hover:text-accent-muted transition-colors flex items-center gap-1.5"
-                  href={code}
                 >
-                  <AiFillGithub aria-hidden="true" /> Source code
+                  <AiOutlineExport aria-hidden="true" /> Issuer verification
                 </Link>
               )}
-              {videoLink ? (
+              {pdfHref && (
                 <Link
+                  href={pdfHref}
                   target="_blank"
-                  rel="nofollow noreferrer"
+                  rel="noreferrer"
                   className="text-fg-muted hover:text-accent-muted transition-colors flex items-center gap-1.5"
-                  href={videoLink}
                 >
-                  <AiOutlineExport aria-hidden="true" /> Video demo
+                  <HiOutlineDocumentArrowDown aria-hidden="true" /> Download PDF
                 </Link>
-              ) : projectLink ? (
-                <Link
-                  target="_blank"
-                  rel="nofollow noreferrer"
-                  className="text-fg-muted hover:text-accent-muted transition-colors flex items-center gap-1.5"
-                  href={projectLink}
-                >
-                  <AiOutlineExport aria-hidden="true" /> Live site
-                </Link>
-              ) : null}
+              )}
             </div>
           </div>
         </div>

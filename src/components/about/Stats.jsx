@@ -1,37 +1,47 @@
-import { Chip } from "../util/Chip";
 import Reveal from "../util/Reveal";
-import { AiFillCode, AiFillSmile } from "react-icons/ai";
+
+const PRIMARY = ["React", "Next.js", "TypeScript", "Node.js", "Tailwind CSS"];
+const ADJACENT = [
+  "Prisma",
+  "Postgres",
+  "Framer Motion",
+  "shadcn/ui",
+  "Redux",
+  "WebSocket",
+];
 
 export const Stats = () => {
   return (
-    <div className="relative">
-      <Reveal>
+    <Reveal width="w-full">
+      <div className="space-y-8">
         <div>
-          <h4 className="flex items-center mb-6">
-            <AiFillCode className="text-indigo-500 text-2xl" />
-            <span className="font-bold ml-2">Use at work</span>
-          </h4>
-          <div className="flex flex-wrap gap-2 mb-12">
-            <Chip>JavaScript</Chip>
-            <Chip>HTML</Chip>
-            <Chip>CSS</Chip>
-            <Chip>React</Chip>
-            <Chip>Next.js</Chip>
-            <Chip>TypeScript</Chip>
-            <Chip>Node.js</Chip>
-            <Chip>Tailwind CSS</Chip>
-            <Chip>shadcn/ui</Chip>
-            <Chip>Prisma</Chip>
-            <Chip>Recharts</Chip>
-            <Chip>React Router</Chip>
-            <Chip>Redux</Chip>
-            <Chip>Framer Motion</Chip>
-            <Chip>Git</Chip>
-            <Chip>GitHub</Chip>
-            <Chip>GitLab</Chip>
-          </div>
+          <h3 className="text-xs uppercase tracking-[0.18em] text-fg-dim mb-4">
+            Daily
+          </h3>
+          <ul className="space-y-2">
+            {PRIMARY.map((tool) => (
+              <li
+                key={tool}
+                className="font-display text-xl text-fg leading-snug"
+              >
+                {tool}
+              </li>
+            ))}
+          </ul>
         </div>
-      </Reveal>
-    </div>
+        <div>
+          <h3 className="text-xs uppercase tracking-[0.18em] text-fg-dim mb-4">
+            Working knowledge
+          </h3>
+          <ul className="space-y-1.5">
+            {ADJACENT.map((tool) => (
+              <li key={tool} className="text-base text-fg-muted">
+                {tool}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </Reveal>
   );
 };

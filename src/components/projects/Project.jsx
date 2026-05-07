@@ -1,15 +1,15 @@
-import { useAnimation, useInView, motion } from "framer-motion";
+import { useAnimation, useInView, useReducedMotion, motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { AiFillGithub, AiOutlineExport } from "react-icons/ai";
-import { BsPlayCircle } from "react-icons/bs"; // Add this import for video icon
+import { BsPlayCircle } from "react-icons/bs";
 import { ProjectModal } from "./ProjectModal";
 import Reveal from "../util/Reveal";
 
 export const Project = ({
   modalContent,
   projectLink,
-  videoLink, // Add this prop
+  videoLink,
   description,
   imgSrc,
   title,
@@ -17,93 +17,110 @@ export const Project = ({
   tech,
 }) => {
   const [hovered, setHovered] = useState(false);
-
   const [isOpen, setIsOpen] = useState(false);
 
   const controls = useAnimation();
-
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+  const prefersReducedMotion = useReducedMotion();
 
   useEffect(() => {
-    if (isInView) {
-      controls.start("visible");
-    } else {
-      controls.start("hidden");
-    }
+    if (isInView) controls.start("visible");
   }, [isInView, controls]);
+
+  const variants = prefersReducedMotion
+    ? { hidden: { opacity: 1, y: 0 }, visible: { opacity: 1, y: 0 } }
+    : { hidden: { opacity: 0, y: 60 }, visible: { opacity: 1, y: 0 } };
 
   return (
     <>
-      <motion.div
+      <motion.article
         ref={ref}
-        variants={{
-          hidden: { opacity: 0, y: 100 },
-          visible: { opacity: 1, y: 0 },
-        }}
+        variants={variants}
         initial="hidden"
         animate={controls}
-        transition={{ duration: 0.75 }}
+        transition={{ duration: 0.7, ease: [0.25, 1, 0.5, 1] }}
       >
-        <div
+        <button
+          type="button"
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
           onClick={() => setIsOpen(true)}
-          className="w-full aspect-video bg-zinc-700 cursor-pointer relative rounded-lg overflow-hidden"
+          aria-label={`Open details for ${title}`}
+          className="block w-full aspect-video bg-bg-elevated relative rounded-lg overflow-hidden text-left"
         >
           <img
             src={imgSrc}
-            alt={`An image of the ${title} project.`}
+            alt={`Screenshot of ${title}`}
+            loading="lazy"
+            decoding="async"
             style={{
-              width: hovered ? "90%" : "75%",
-              rotate: hovered ? "2deg" : "0deg",
+              width: hovered && !prefersReducedMotion ? "90%" : "75%",
+              rotate: hovered && !prefersReducedMotion ? "2deg" : "0deg",
             }}
-            className="w-[85%] absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/4 transition-all rounded"
+            className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/4 transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] rounded-md shadow-2xl"
           />
-        </div>
+        </button>
         <div className="mt-6">
           <Reveal width="w-full">
-            <div className="flex items-center gap-2 w-full">
-              <h4 className="font-bold text-lg shrink-0 max-w-[calc(100%_-_150px)]">
+            <div className="flex items-center gap-3 w-full">
+              <h3 className="font-display text-lg md:text-xl text-fg shrink-0 max-w-[calc(100%_-_120px)]">
                 {title}
-              </h4>
-              <div className="w-full h-[1px] bg-zinc-600" />
-
+              </h3>
+              <div className="flex-1 h-px bg-line" aria-hidden="true" />
               {code && (
-                <Link href={code} target="_blank" rel="nofollow">
-                  <AiFillGithub className="text-xl text-zinc-300 hover:text-indigo-300 transition-colors" />
+                <Link
+                  href={code}
+                  target="_blank"
+                  rel="nofollow noreferrer"
+                  aria-label={`${title} source code on GitHub`}
+                  className="text-fg-muted hover:text-accent-muted transition-colors"
+                >
+                  <AiFillGithub className="text-xl" />
                 </Link>
               )}
-
               {videoLink ? (
-                <Link href={videoLink} target="_blank" rel="nofollow">
-                  <BsPlayCircle className="text-xl text-zinc-300 hover:text-indigo-300 transition-colors" />
+                <Link
+                  href={videoLink}
+                  target="_blank"
+                  rel="nofollow noreferrer"
+                  aria-label={`${title} video demo`}
+                  className="text-fg-muted hover:text-accent-muted transition-colors"
+                >
+                  <BsPlayCircle className="text-xl" />
                 </Link>
               ) : projectLink ? (
-                <Link href={projectLink} target="_blank" rel="nofollow">
-                  <AiOutlineExport className="text-xl text-zinc-300 hover:text-indigo-300 transition-colors" />
+                <Link
+                  href={projectLink}
+                  target="_blank"
+                  rel="nofollow noreferrer"
+                  aria-label={`Open ${title} live`}
+                  className="text-fg-muted hover:text-accent-muted transition-colors"
+                >
+                  <AiOutlineExport className="text-xl" />
                 </Link>
               ) : null}
             </div>
           </Reveal>
           <Reveal>
-            <div className="flex flex-wrap gap-4 text-sm text-indigo-300 my-2">
-              {tech.join(" - ")}
-            </div>
+            <p className="text-xs uppercase tracking-[0.12em] text-fg-dim my-2">
+              {tech.join(" / ")}
+            </p>
           </Reveal>
           <Reveal>
-            <p className="text-zinc-300 leading-relaxed">
+            <p className="text-fg-muted leading-relaxed max-w-prose">
               {description}{" "}
-              <span
-                className="inline-block text-sm text-indigo-300 cursor-pointer"
+              <button
+                type="button"
                 onClick={() => setIsOpen(true)}
+                className="text-sm text-accent-muted hover:text-fg transition-colors"
               >
-                Learn more {">"}
-              </span>
+                Learn more →
+              </button>
             </p>
           </Reveal>
         </div>
-      </motion.div>
+      </motion.article>
       <ProjectModal
         modalContent={modalContent}
         projectLink={projectLink}

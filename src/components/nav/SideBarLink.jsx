@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
 
 const MotionLink = motion(Link);
@@ -10,19 +10,21 @@ export const SideBarLink = ({
   href,
   value,
 }) => {
+  const prefersReducedMotion = useReducedMotion();
+  const isActive = selected === value;
+
   return (
     <MotionLink
-      initial={{ x: -70 }}
+      initial={prefersReducedMotion ? false : { x: -70 }}
       animate={{ x: 0 }}
-      transition={{ duration: 0.5, delay: 0.1 }}
+      transition={{ duration: 0.6, delay: 0.1, ease: [0.25, 1, 0.5, 1] }}
       href={href}
-      onClick={() => {
-        setSelected(value);
-      }}
-      className={`writing-vertical h-24 shrink-0 flex items-center justify-center border-r-2 text-sm transition-all w-full ${
-        selected === value
-          ? "bg-zinc-800 border-indigo-500 opacity-100"
-          : "border-transparent hover:border-r-zinc-50 opacity-50 hover:bg-zinc-900"
+      onClick={() => setSelected(value)}
+      aria-current={isActive ? "true" : undefined}
+      className={`writing-vertical h-24 shrink-0 flex items-center justify-center border-r-2 text-xs uppercase tracking-[0.18em] w-full transition-colors duration-300 ease-out ${
+        isActive
+          ? "bg-bg-mid border-accent text-fg"
+          : "border-transparent text-fg-dim hover:text-fg hover:bg-bg"
       }`}
     >
       {children}

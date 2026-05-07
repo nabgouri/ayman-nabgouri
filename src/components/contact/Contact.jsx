@@ -4,32 +4,32 @@ import Reveal from "../util/Reveal";
 
 export const Contact = () => {
   return (
-    <section className="section-wrapper" id="contact">
-      <div className="max-w-xl mx-auto bg-zinc-800 px-8 py-12 rounded-xl">
+    <section
+      id="contact"
+      className="section-wrapper scroll-mt-24 pt-12 md:pt-16"
+    >
+      <div className="max-w-3xl mx-auto text-center space-y-8">
         <Reveal width="w-full">
-          <h4 className="text-4xl md:text-5xl text-center font-black">
-            Contact<span className="text-indigo-500">.</span>
-          </h4>
+          <h2 className="font-display text-headline tracking-tight">
+            Let&apos;s talk
+            <span className="text-accent">.</span>
+          </h2>
         </Reveal>
         <Reveal width="w-full">
-          <p className="text-center my-8 text-zinc-300 leading-relaxed">
-            Shoot me an email if you want to connect! You can also find me on{" "}
-            <Link
-              href="https://www.linkedin.com/in/ayman-nabgouri-a36122229/"
-              target="_blank"
-              className="text-indigo-300 hover:underline"
-            >
-              Linkedin
-            </Link>{" "}
-            if that&apos;s more your speed.
+          <p className="text-base md:text-lg text-fg-muted leading-[1.7] max-w-prose mx-auto">
+            Hiring for a small team building ambitious product? Working on
+            something hard and want a second pair of hands? Drop a line — I
+            read every email.
           </p>
         </Reveal>
         <Reveal width="w-full">
-          <Link href="mailto:nagouri9@gmail.com">
-            <div className="flex items-center justify-center gap-2 w-fit text-lg md:text-2xl whitespace-normal mx-auto hover:text-indigo-300 transition-colors">
-              <AiFillMail />
-              <span>nabgouri9@gmail.com</span>
-            </div>
+          <Link
+            href="mailto:nabgouri9@gmail.com"
+            aria-label="Email Ayman at nabgouri9@gmail.com"
+            className="inline-flex items-center justify-center gap-3 text-lg md:text-2xl text-fg hover:text-accent-muted transition-colors"
+          >
+            <AiFillMail aria-hidden="true" />
+            <span>nabgouri9@gmail.com</span>
           </Link>
         </Reveal>
       </div>

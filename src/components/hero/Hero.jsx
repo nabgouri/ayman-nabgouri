@@ -1,44 +1,51 @@
 import Reveal from "../util/Reveal";
-import DotGrid from "./DotGrid";
 import { OutlineButton } from "../buttons/OutlineButton";
 
 const Hero = () => {
   return (
-    <section className="text-slat-100 overflow-hidden py-24 md:py-32">
-      <div className="relative">
-        <div className="pointer-events-none relative z-10">
-          <Reveal>
-            <h1 className="pointer-events-auto text-4xl sm:text-6xl font-black text-zinc-100 md:text-8xl">
-              Hi, I'm Ayman<span className="text-indigo-500">.</span>
-            </h1>
-          </Reveal>
-          <Reveal>
-            <h2 className="pointer-events-auto my-2 text-xl sm:text-2xl text-zinc-300 md:my-4 md:text-4xl">
-              I'm a{" "}
-              <span className="font-semibold text-indigo-500">
-                Full Stack Developer
-              </span>
-            </h2>
-          </Reveal>
-          <Reveal>
-            <p className="pointer-events-auto leading-relaxed md:leading-relaxed max-w-xl text-sm text-zinc-300 md:text-base">
-              I'am Creative full-stack developer crafting intuitive web
-              experiences through clean code and innovative design solutions.
-              Let's connect!
-            </p>
-          </Reveal>
-          <Reveal>
+    <section className="pt-20 pb-12 md:pt-32 md:pb-24">
+      <div className="space-y-6 md:space-y-8">
+        <Reveal>
+          <p className="font-sans text-sm tracking-[0.18em] uppercase text-fg-dim">
+            Ayman Nabgouri / Full-stack developer
+          </p>
+        </Reveal>
+        <Reveal>
+          <h1 className="font-display text-display tracking-tight text-fg">
+            Make things that work
+            <span className="text-accent">.</span>
+          </h1>
+        </Reveal>
+        <Reveal>
+          <h2 className="font-display text-headline text-fg-muted max-w-3xl">
+            And then make them feel right.
+          </h2>
+        </Reveal>
+        <Reveal width="w-full">
+          <p className="max-w-prose text-base md:text-lg leading-[1.7] text-fg-muted">
+            I&apos;m a full-stack developer working in React, Next.js, and
+            TypeScript. Currently shipping production apps end to end —
+            interface to database. Looking for a small team with hard problems
+            and room to make creative calls.
+          </p>
+        </Reveal>
+        <Reveal>
+          <div className="flex flex-wrap items-center gap-4 pt-2">
             <OutlineButton
               onClick={() => {
                 document.getElementById("contact")?.scrollIntoView();
               }}
-              className="pointer-events-auto before:bg-indigo-700 hover:text-white hover:border-indigo-700 mt-4 bg-indigo-500 text-zinc-100 border-indigo-500 md:mt-6"
             >
-              Contact Me
+              Start a conversation
             </OutlineButton>
-          </Reveal>
-        </div>
-        <DotGrid />
+            <a
+              href="#projects"
+              className="text-sm text-fg-muted hover:text-accent-muted transition-colors"
+            >
+              See the work →
+            </a>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
