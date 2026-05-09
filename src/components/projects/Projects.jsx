@@ -21,6 +21,35 @@ export const Projects = () => {
 
 const projects = [
   {
+    title: "Hurr App Website",
+    imgSrc: "project-imgs/hurr-app-website.png",
+    projectLink: "https://hurr.pro",
+    tech: ["Astro", "TypeScript", "Cloudflare", "RTL", "i18n"],
+    description:
+      "Arabic-first Astro website for Hurr, a privacy-focused content-blocking app, with RTL layouts, honest launch messaging, localized legal pages, and static Cloudflare deployment.",
+    modalContent: (
+      <>
+        <p>
+          Built the public website for Hurr with Astro and TypeScript, shaping
+          an Arabic-first RTL experience that presents the mobile app clearly
+          while keeping the website itself fast, static, and easy to deploy on
+          Cloudflare.
+        </p>
+        <p>
+          Designed the page around trust instead of inflated social proof:
+          honest Android and iOS availability messaging, privacy-aware copy,
+          localized legal pages, and clear product context for a sensitive
+          content-blocking app.
+        </p>
+        <p>
+          Implemented the landing page structure, localized routes, Open Graph
+          presentation, and responsive desktop/mobile layouts so the site can
+          act as the product's primary public presence at hurr.pro.
+        </p>
+      </>
+    ),
+  },
+  {
     title: "Mood Tracking App",
     imgSrc: "project-imgs/mood-tracking.webp",
     code: "https://github.com/nabgouri/mood-tracking",
@@ -70,6 +99,8 @@ const projects = [
       "WebSocket",
       "MapLibre GL",
     ],
+    accessNote:
+      "This was built for internal company operations, so the production URL and source code are private. I can share the implementation approach, product decisions, and a recorded walkthrough instead.",
     description:
       "A comprehensive Progressive Web App for courier management with real-time order notifications, location tracking, and offline capabilities for seamless delivery operations",
     modalContent: (
