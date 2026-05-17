@@ -21,6 +21,45 @@ export const Projects = () => {
 
 const projects = [
   {
+    title: "ycloud Hosting Platform",
+    imgSrc: "project-imgs/ycloud-hosting-platform.png",
+    projectLink: "https://infinityscale.online",
+    tech: ["React", "TanStack", "Tailwind", "Stripe", "RTL", "i18n"],
+    description:
+      "Lead frontend, authentication, and payments contributor on ycloud, a hosting platform built for the Arabic region — shipped the bilingual customer console (TanStack + Tailwind 4), Google/GitHub OAuth sign-in, the Stripe checkout flow, and the editorial marketing site.",
+    modalContent: (
+      <>
+        <p>
+          Contributed as the lead frontend, authentication, and payments
+          engineer on ycloud, a small-team hosting platform built for the
+          Arabic region — selling web hosting, VPS, and domains through
+          tiered plans. The console is bilingual ar/en with RTL as the
+          primary direction, and ships at infinityscale.online.
+        </p>
+        <p>
+          Built the entire customer-facing console on TanStack Router and
+          Tailwind 4 — plan picker, provisioning, the website detail flow,
+          cross-subscription domain binding, and plan upgrade with
+          time-transfer math. Shipped the authentication system end-to-end:
+          Google and GitHub OAuth, session-guarded console routes, and the
+          onboarding first-run states. Owned the payments slice as well:
+          Invoice/Payment schema and services, the Stripe card path with
+          atomic webhook finalization, auto-Void for stale invoices, and a
+          bank-transfer reconciliation surface.
+        </p>
+        <p>
+          Designed for density and editorial confidence rather than the
+          calm/airy default — bold typographic hierarchy, decisive layouts,
+          and considered animations on the homepage and templates marquee
+          tuned for restraint over flash. Bone/emerald palette, RTL-first
+          layouts mirrored cleanly to LTR. The marketing pages at
+          infinityscale.online share the same design language as the
+          console.
+        </p>
+      </>
+    ),
+  },
+  {
     title: "Hurr App Website",
     imgSrc: "project-imgs/hurr-app-website.png",
     projectLink: "https://hurr.pro",
