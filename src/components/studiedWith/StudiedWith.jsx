@@ -72,18 +72,18 @@ const certificates = [
       "Accessibility",
     ],
   },
-  {
-    title: "Certified Junior React Developer",
-    creator: "certificates.dev",
-    year: "2026",
-    imgSrc: "/certificates/certified-react-dev-1.png",
-    pdfHref: "/certificates/react-certifacte-dev.pdf",
-    verifyUrl:
-      "https://certificates.dev/c/a1436df4-5e1d-4613-ac0b-5774cca73419",
-    summary:
-      "A proctored React exam covering components, state, effects, context, performance, and accessibility — issued by the React community's certificates.dev (CJRD-008407).",
-    skills: ["React", "Hooks", "Context", "Performance", "Accessibility"],
-  },
+  // {
+  //   title: "Certified Junior React Developer",
+  //   creator: "certificates.dev",
+  //   year: "2026",
+  //   imgSrc: "/certificates/certified-react-dev-1.png",
+  //   pdfHref: "/certificates/react-certifacte-dev.pdf",
+  //   verifyUrl:
+  //     "https://certificates.dev/c/a1436df4-5e1d-4613-ac0b-5774cca73419",
+  //   summary:
+  //     "A proctored React exam covering components, state, effects, context, performance, and accessibility — issued by the React community's certificates.dev (CJRD-008407).",
+  //   skills: ["React", "Hooks", "Context", "Performance", "Accessibility"],
+  // },
 ];
 
 const courses = [
